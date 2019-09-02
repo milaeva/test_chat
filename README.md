@@ -33,4 +33,4 @@ footer - Содержит меню и прочую информацию
 
 Исходные данные скрыто
 
-[demo]{https://milaeva.github.io/test_chat/}
+[demo](https://milaeva.github.io/test_chat/)
