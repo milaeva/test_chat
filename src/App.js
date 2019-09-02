@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import "./App.css";
+import Title from "./components/Title/Title";
+import MessageList from "./components/MessageList/MessageList";
+import SendMessageForm from "./components/SendMessageForm/SendMessageForm";
+import Footer from "./components/Footer/Footer";
+
+function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Title />
+      <MessageList data={props.state.data} />
+      <SendMessageForm addPost={props.addPost} newPostText={props.state.newPostText} updateNewPostText={props.updateNewPostText}/>
+      <Footer />
     </div>
   );
 }
